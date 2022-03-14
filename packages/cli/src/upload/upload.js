@@ -100,6 +100,11 @@ function buildCommand(yargs) {
       description:
         '[lhci only] The password to use on a server protected with HTTP Basic Authentication.',
     },
+    preserveQueryParams: {
+      type: 'boolean',
+      description: 'Whether to strip query parameters from URLs when uploading',
+      default: false,
+    },
     serverBaseUrl: {
       description: '[lhci only] The base URL of the LHCI server where results will be saved.',
       default: 'http://localhost:9001/',
@@ -186,6 +191,10 @@ async function postStatusToGitHub(options) {
  */
 function getUrlLabelForGithub(rawUrl, options) {
   try {
+    if (options.preserveQueryParams) {
+      return replaceUrlPatterns(rawUrl, options.urlReplacementPatterns);
+    }
+
     const url = new URL(rawUrl);
     return replaceUrlPatterns(url.pathname, options.urlReplacementPatterns);
   } catch (_) {
