@@ -1,5 +1,5 @@
 {
-  "name": "@lhci/cli",
+  "name": "@loveholidays/lhci-cli",
   "version": "0.1.0",
   "license": "Apache-2.0",
   "repository": {
@@ -7,7 +7,7 @@
     "url": "https://github.com/GoogleChrome/lighthouse-ci.git"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "restricted"
   },
   "bin": {
     "lhci": "./src/cli.js"

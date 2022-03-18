@@ -8,7 +8,7 @@
     "url": "https://github.com/GoogleChrome/lighthouse-ci.git"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "restricted"
   },
   "scripts": {
     "clean": "rm -rf ./dist ./storybook-static",

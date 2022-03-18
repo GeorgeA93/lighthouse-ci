@@ -7,7 +7,7 @@
     "url": "https://github.com/GoogleChrome/lighthouse-ci.git"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "restricted"
   },
   "dependencies": {
     "debug": "^4.3.1",
